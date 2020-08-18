@@ -1,0 +1,15 @@
+Given an array of integers nums and an integer limit, return the size of the longest non-empty subarray such that the absolute difference between any two elements of this subarray is less than or equal to limit.
+
+Input: nums = [8,2,4,7], limit = 4
+Output: 2 
+
+0. initialize a min and max []int{}, and count int
+loop over input slice ...
+1. if the current index is greater or less than the last, for either min and max. Pop off the last element
+2. always append the current input value to both min and max lists
+3. Get the difference between the first elements in both slices. 
+4. If the first element of both min or max is equal to input[count], pop off the first element of either
+5. if the difference greater than limit, increment the count.
+6. return len(nums) - count
+
+
